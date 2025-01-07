@@ -8,20 +8,23 @@ const subtract = function (a, b) {
 
 const sum = function (...args) {
   let nums = args.flat();
-  let count = 0;
-  for (let num of nums) {
-    count += num;
-  }
+  // let count = 0;
+  // for (let num of nums) {
+  //   count += num;
+  // }
 
-  return count;
+  // return count;
+  return nums.reduce((total, num) => total + num, 0);
 };
+
 const multiply = function (...args) {
   let nums = args.flat();
-  let count = 1;
-  for (let num of nums) {
-    count *= num;
-  }
-  return count;
+  // let count = 1;
+  // for (let num of nums) {
+  //   count *= num;
+  // }
+  // return count;
+  return nums.reduce((total, num) => total * num);
 };
 
 const power = function (a, b) {
